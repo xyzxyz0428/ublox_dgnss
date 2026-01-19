@@ -8,10 +8,16 @@ def generate_launch_description():
   """Generate launch description for ublox_dgnss components."""
   params = [{'CFG_USBOUTPROT_NMEA': False},
             {'CFG_RATE_MEAS': 100},
-            {'CFG_RATE_NAV': 1},
-            {'CFG_MSGOUT_UBX_NAV_HPPOSLLH_USB': 1},
-            {'CFG_MSGOUT_UBX_NAV_STATUS_USB': 5},
-            {'CFG_MSGOUT_UBX_RXM_RTCM_USB': 1}]
+            {'CFG_RATE_NAV': 5},
+            {'CFG_MSGOUT_UBX_NAV_PVT_USB': 1},
+            {'CFG_MSGOUT_UBX_NAV_STATUS_USB': 1},
+            {'CFG_MSGOUT_UBX_RXM_RTCM_USB': 1},
+            {'CFG_MSGOUT_UBX_NAV_VELNED_USB': 1},
+            {'CFG_MSGOUT_UBX_ESF_STATUS_USB': 1},
+            {'CFG_MSGOUT_UBX_ESF_RAW_USB': 1},
+            {'CFG_MSGOUT_UBX_ESF_INS_USB': 1},
+            {'CFG_MSGOUT_UBX_ESF_MEAS_USB': 1},
+            {'CFG_MSGOUT_UBX_ESF_STATUS_USB': 1}]
 
   container1 = ComposableNodeContainer(
     name='ublox_dgnss_container',
